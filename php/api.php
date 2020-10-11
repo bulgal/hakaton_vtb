@@ -27,7 +27,7 @@ $criteria = [
 
 
 if ($request == '/php/api.php/payment') {
-    // $criteria = $body['criteria'];
+    $criteria = $body['formula']['criteria'];
 
     $userData = $body['data'];
     $ip = $body['data']['ip'];
@@ -47,7 +47,7 @@ if ($request == '/php/api.php/payment') {
     $purchaseResult = getResultPurchase($record, $purchase);
 
 
-    $weightedArithmeticMean = ($criteria['fingerprint']['weight'] * $fingerprintResult + $criteria['country']['weight'] * $geoResult + $criteria['purchase']['weight'] * $purchaseResult / 100) / 3;
+    $weightedArithmeticMean = ((int)$criteria['fingerprint']['weight'] * $fingerprintResult + (int)$criteria['country']['weight'] * $geoResult + (int)$criteria['purchase']['weight'] * $purchaseResult / 100) / 3;
     $highestMean = 8;
     $resultInPercent = round($weightedArithmeticMean / $highestMean * 100, 1);
 
@@ -69,15 +69,15 @@ if ($request == '/php/api.php/payment') {
         'formula' => [
             'criteria' => [
                 'fingerprint' => [
-                    'weight' => $criteria['fingerprint']['weight'],
+                    'weight' => (int)$criteria['fingerprint']['weight'],
                     'result' => $fingerprintResult ?: 0
                 ],
                 'country' => [
-                    'weight' => $criteria['country']['weight'],
+                    'weight' => (int)$criteria['country']['weight'],
                     'result' => $geoResult ?: 0
                 ],
                 'purchase' => [
-                    'weight' => $criteria['purchase']['weight'],
+                    'weight' => (int)$criteria['purchase']['weight'],
                     'result' => $purchaseResult ?: 0
                 ]
             ],
@@ -119,15 +119,15 @@ if ($request == '/php/api.php/payment') {
         'formula' => [
             'criteria' => [
                 'fingerprint' => [
-                    'weight' => $criteria['fingerprint']['weight'],
+                    'weight' => 10,
                     'result' => $fingerprintResult ?: 0
                 ],
                 'country' => [
-                    'weight' => $criteria['country']['weight'],
+                    'weight' => 9,
                     'result' => $geoResult ?: 0
                 ],
                 'purchase' => [
-                    'weight' => $criteria['purchase']['weight'],
+                    'weight' => 4,
                     'result' => $purchaseResult ?: 0
                 ]
             ],

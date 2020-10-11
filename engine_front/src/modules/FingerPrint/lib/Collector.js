@@ -27,6 +27,7 @@ export class Collector {
       card: blank.card ? blank.card : Collector.__getAccount(),
       ip: "127.0 0.1",
       purchase: blank.purchase,
+      formula: blank.formula ? blank.formula : null,
     };
   }
 
