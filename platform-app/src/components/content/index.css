@@ -1,0 +1,29 @@
+.content {
+  width: 100%;
+  margin-right: 20px;
+}
+
+.form__row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.form__buy-form-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.form__row-size_half_width {
+  width: 50%;
+}
+
+.form-fingerprint {
+  width: 357px;
+}
+
+.form-fingerprint .form__label-title {
+  font-size: 14px;
+}

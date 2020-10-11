@@ -1,0 +1,11 @@
+ @font-face {
+          font-family: 'MullerBold';
+          src: url("http://bulgal.ru/fonts/MullerBold.woff");
+          src: url("http://bulgal.ru/fonts/MullerBold.woff2");
+ }
+
+  @font-face {
+          font-family: 'Muller';
+          src: url("http://bulgal.ru/fonts/MullerMedium.woff");
+          src: url("http://bulgal.ru/fonts/MullerMedium.woff2");
+        }

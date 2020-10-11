@@ -1,0 +1,25 @@
+{
+  "name": "user_finger_print",
+  "private": true,
+  "scripts": {
+    "start:dev": "webpack-dev-server",
+    "start:watch": "webpack --watch",
+    "start:build": "webpack --env.production"
+  },
+  "author": "Котики",
+  "license": "ISC",
+  "devDependencies": {
+    "clean-webpack-plugin": "^3.0.0",
+    "html-webpack-plugin": "^4.5.0",
+    "terser-webpack-plugin": "^4.2.3",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "ua-parser-js": "^0.7.22"
+  },
+  "browser":{
+    "child_process": false
+}
+}

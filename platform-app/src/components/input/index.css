@@ -1,0 +1,28 @@
+.form__label {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  color: var(--color-dark);
+}
+
+.form__label-title {
+  opacity: 0.3;
+}
+
+.form__input {
+  font-family: "Muller";
+  width: 357px;
+  height: 50px;
+  border: 1px solid var(--color-biege);
+  border-radius: 3px;
+  padding-left: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--color-dark);
+  outline: none;
+  margin-top: 10px;
+}
+
+.form__input__width-absolute {
+  width: 100%;
+}

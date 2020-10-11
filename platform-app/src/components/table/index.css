@@ -1,0 +1,26 @@
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 25px;
+}
+
+.table__title {
+  padding-bottom: 20px;
+  text-align: left;
+  font-size: 14px;
+  color: #000000;
+  opacity: 0.3;
+  font-weight: normal;
+}
+
+.table__row:first-child {
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.table__row td {
+  padding: 25px 0;
+}
+
+.table__row:not(:last-child) {
+  border-bottom: 0.5px dashed rgba(0, 0, 0, 0.2);
+}

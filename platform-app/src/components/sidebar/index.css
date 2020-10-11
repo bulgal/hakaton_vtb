@@ -1,0 +1,60 @@
+.side-bar {
+  width: var(--width-side-bar);
+}
+
+.formula-form__result-text {
+  margin-top: 20px;
+  color: var(--color-grey);
+  font-size: 16px;
+}
+
+.formula-form__result-text span {
+  font-weight: 800;
+  color: var(--color-dark);
+  font-size: 18px;
+  padding-left: 5px;
+}
+
+.formula-form__row {
+  padding: 20px 0;
+}
+
+.formula-form__row:not(:first-child) {
+  margin-top: 20px;
+}
+
+.formula-form__row:not(:last-child) {
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
+}
+
+.formula-result-table {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.formula-result-table__percents {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 52px;
+}
+
+.formula-result-table__percents-status_positive,
+.formula-result-table__percents-status_positive + .formula-result-table__label {
+  color: var(--color-lavanda);
+}
+
+.formula-result-table__percents-status_negative,
+.formula-result-table__percents-status_negative + .formula-result-table__label {
+  color: var(--color-lavanda);
+}
+
+.formula-result-table__percents-status_disabled,
+.formula-result-table__percents-status_disabled + .formula-result-table__label {
+  color: var(--color-dark);
+}
+
+.formula-result-table__label {
+  font-weight: normal;
+  font-size: 14px;
+}

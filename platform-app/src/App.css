@@ -1,0 +1,181 @@
+@font-face {
+  font-family: "Muller";
+  src: url("./assets/fonts/MullerMedium.woff2") format("woff2"),
+    url("./assets/fonts/MullerMedium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Muller";
+  src: url("./assets/fonts/MullerBlack.woff2") format("woff2"),
+    url("./assets/fonts/MullerBlack.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Muller";
+  src: url("./assets/fonts/MullerRegular.woff2") format("woff2"),
+    url("./assets/fonts/MullerRegular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Muller";
+  src: url("./assets/fonts/MullerExtraBold.woff2") format("woff2"),
+    url("./assets/fonts/MullerExtraBold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Muller";
+  src: url("./assets/fonts/MullerBold.woff2") format("woff2"),
+    url("./assets/fonts/MullerBold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --color-dark: #2d2d2d;
+  --color-biege: #cccccc;
+  --color-white: #ffffff;
+  --color-grey: #646464;
+  --color-lavanda-light: rgba(184, 232, 229, 1);
+  --color-lavanda: #11b4a8;
+  --color-red-light: rgba(253, 238, 238, 1);
+  --color-red: #e83d3d;
+  --width-side-bar: 387px;
+}
+
+body {
+  font-family: "Muller";
+  background-color: #fbfcff;
+}
+
+.container-app {
+  width: 100%;
+  display: flex;
+  padding: 40px 120px;
+}
+
+/* ROOT */
+
+.flex-align-center {
+  align-items: center;
+}
+
+.component-styling {
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-color: var(--color-white);
+}
+
+.title {
+  color: var(--color-dark);
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.block:not(:first-child) {
+  margin-top: 40px;
+}
+
+.block__wrapper-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.arrow {
+  width: 18px;
+  height: 8px;
+  background-image: url("./assets/img/arrow.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+
+.arrow-state_close {
+  transform: rotate(180deg);
+}
+
+.arrow-state_open {
+  transform: rotate(0);
+}
+
+.block__title {
+  color: var(--color-dark);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.wrapper {
+  padding: 30px;
+}
+
+.block_scroll {
+  overflow-x: auto;
+}
+
+@media (max-width: 1421px) {
+  .form-fingerprint {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 1450px) {
+  .progress-bar {
+    margin-top: 40px;
+  }
+
+  .form__buy-form-wrapper div {
+    width: 100%;
+  }
+
+  .form__row-size_half_width {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1421px) {
+  .form__label {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .form__input {
+    width: 100%;
+  }
+  .form__select {
+    width: 100%;
+  }
+}
+
+@media (max-width: 970px) {
+  .container-app {
+    flex-wrap: wrap;
+    padding: 40px 40px;
+  }
+  .content {
+    margin-right: 0;
+  }
+  .side-bar {
+    width: 100%;
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 500px) {
+  .container-app {
+    padding: 10px 10px;
+  }
+}
